@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorythm - Wear The Code</title>
+
+   
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia;
+            font-style: italic;
+        }
+
+        /* ===== header ===== */
+        .header {
+            background-color: #bfff6b;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header img {
+            width: 120px;
+            border-radius: 60px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin: 10px 0 0 0;
+        }
+
+        /* ===== menu ===== */
+        .menu {
+            background-color: black;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 3px solid #bfff6b;
+        }
+
+        .menu a {
+            color: #bfff6b;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        /* ===== section ===== */
+        .isi {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .hijau {
+            background-color: #bfff6b;
+            color: black;
+        }
+
+        .judul {
+            font-size: 30px;
+            color: #bfff6b;
+        }
+
+        .hijau .judul {
+            color: black;
+        }
+
+        /* ===== kartu produk ===== */
+        .produk {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            border: 3px solid black;
+            vertical-align: top;
+        }
+
+        .produk img {
+            width: 220px;
+            height: 260px;
+            background-color: #dddddd;
+        }
+
+        .produk h3 {
+            color: #bfff6b;
+            font-size: 22px;
+        }
+
+        .detail {
+            display: none;
+            background-color: #bfff6b;
+            color: black;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .tombol {
+            background-color: #bfff6b;
+            color: black;
+            border: 2px solid black;
+            padding: 6px 10px;
+            margin: 3px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ===== tabel ukuran ===== */
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            background-color: black;
+            color: white;
+        }
+
+        th, td {
+            border: 2px solid #bfff6b;
+            padding: 10px 18px;
+        }
+
+        th {
+            color: #bfff6b;
+        }
+
+        /* ===== biografi ===== */
+        .bio {
+            max-width: 700px;
+            margin: auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .bio img {
+            width: 250px;
+            height: 250px;
+            float: right;
+            margin: 0 0 10px 15px;
+            background-color: #dddddd;
+        }
+
+        /* ===== form ===== */
+        .form {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            width: 400px;
+            max-width: 85%;
+        }
+
+        fieldset {
+            border: 2px solid #bfff6b;
+        }
+
+        legend {
+            color: #bfff6b;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+            width: 95%;
+            padding: 6px;
+        }
+
+        /* ===== kontak & footer ===== */
+        .kontak a {
+            color: #bfff6b;
+        }
+
+        .footer {
+            background-color: #bfff6b;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="header" id="home">
+        <img src="images/logo.png" alt="Logo Algorythm">
+        <h1>ALGORYTHM</h1>
+        <blockquote>"Wear The Code"</blockquote>
+        <p><b>Style in Sync.</b> T-shirt, longsleeve, dan hoodie dari brand lokal kecil-kecilan.</p>
+    </div>
+
+    
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#ukuran">Ukuran</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#pesan">Pesan</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
+    
+    <section id="katalog" class="isi hijau">
+        <h2 class="judul">Katalog Produk</h2>
+        <p>Klik <b>Depan</b> atau <b>Belakang</b> untuk melihat foto produk.</p>
+
+        
+        <div class="produk">
+            <img id="foto1" src="images/T-Shirt.jpg" alt="T-Shirt Algorythm">
+            <br>
+            <button class="tombol" onclick='document.getElementById("foto1").src = "images/T-Shirt.jpg"'>Depan</button>
+            <button class="tombol" onclick='document.getElementById("foto1").src = "images/T-Shirt.jpg"'>Belakang</button>
+            <h3>Algorythm T-Shirt</h3>
+            <p><del>Rp 150.000</del> <mark>Rp 125.000</mark></p>
+            <button class="tombol" onclick='document.getElementById("detail1").style.display = "block"'>Lihat Detail</button>
+            <div class="detail" id="detail1">
+                <p>Kaos lengan pendek bahan cotton combed 24s dengan sablon logo jam di bagian dada.</p>
+                <p><small>Ukuran: S, M, L, XL</small></p>
+                <button class="tombol" onclick='document.getElementById("detail1").style.display = "none"'>Tutup</button>
+            </div>
+        </div>
+
+        
+        <div class="produk">
+            <img id="foto2" src="images/longsleve.png" alt="Longsleeve Algorythm">
+            <br>
+            <button class="tombol" onclick='document.getElementById("foto2").src = "images/longsleve.png"'>Depan</button>
+            <button class="tombol" onclick='document.getElementById("foto2").src = "images/longsleve.png"'>Belakang</button>
+            <h3>Algorythm Longsleeve</h3>
+            <p>Rp 175.000</p>
+            <button class="tombol" onclick='document.getElementById("detail2").style.display = "block"'>Lihat Detail</button>
+            <div class="detail" id="detail2">
+                <p>Kaos lengan panjang bahan cotton combed 24s dengan desain jam di bagian belakang.</p>
+                <p><small>Ukuran: S, M, L, XL</small></p>
+                <button class="tombol" onclick='document.getElementById("detail2").style.display = "none"'>Tutup</button>
+            </div>
+        </div>
+
+        
+        <div class="produk">
+            <img id="foto3" src="images/hoodie.png" alt="Hoodie Algorythm">
+            <br>
+            <button class="tombol" onclick='document.getElementById("foto3").src = "images/hoodie.png"'>Depan</button>
+            <button class="tombol" onclick='document.getElementById("foto3").src = "images/hoodie.png"'>Belakang</button>
+            <h3>Algorythm Hoodie</h3>
+            <p>Rp 275.000</p>
+            <button class="tombol" onclick='document.getElementById("detail3").style.display = "block"'>Lihat Detail</button>
+            <div class="detail" id="detail3">
+                <p>Hoodie bahan fleece tebal dan hangat, dengan sablon logo jam dan tulisan Wear The Code.</p>
+                <p><small>Ukuran: S, M, L, XL</small></p>
+                <button class="tombol" onclick='document.getElementById("detail3").style.display = "none"'>Tutup</button>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    
+    <section id="ukuran" class="isi">
+        <h2 class="judul">Panduan Ukuran</h2>
+        <table>
+            <caption><strong>Ukuran T-Shirt (cm)</strong></caption>
+            <thead>
+                <tr>
+                    <th scope="col">Ukuran</th>
+                    <th scope="col">Lebar Dada</th>
+                    <th scope="col">Panjang</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S</td>
+                    <td>49</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>52</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>55</td>
+                    <td>72</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>58</td>
+                    <td>74</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><small>Ukuran bisa berbeda 1-2 cm karena dijahit manual.</small></p>
+    </section>
+
+    <hr>
+
+    
+    <section id="tentang" class="isi hijau">
+        <h2 class="judul">Tentang Algorythm</h2>
+        <div class="bio">
+            <img src="images/foto.png" alt="Foto Algorythm">
+            
+            <p><strong>Algorythm</strong> adalah brand pakaian kecil yang berdiri pada tahun <b>2026</b>. Nama Algorythm diambil dari kata <i>algoritma</i>, yaitu langkah-langkah yang tersusun rapi untuk menyelesaikan sesuatu.</p>
+            <p>Awalnya brand ini dimulai dari <b>ide iseng karena suka dengan fashion jadi mencoba untuk mendesain sendiri.</b>. Sekarang Algorythm baru punya 3 produk, yaitu t-shirt, longsleeve, dan hoodie.</p>
+            <p>Kami percaya bahwa gaya dan teknologi bisa berjalan bersama. Karena itu, tagline kami adalah <q>Wear The Code & stay in sinc.</q>.</p>
+            <p>Terima kasih sudah mampir. Dukung brand lokal kecil seperti kami!</p>
+        </div>
+    </section>
+
+    <hr>
+
+  
+    <section id="pesan" class="isi">
+        <h2 class="judul">Form Pemesanan</h2>
+        <p>Isi form di bawah ini, lalu pesananmu akan dikirim lewat email.</p>
+
+        <div class="form">
+            <form action="mailto:fauzanaaazhimi@gmail.com" method="post" enctype="text/plain">
+
+                <fieldset>
+                    <legend>Data Pemesan</legend>
+
+                    <label for="nama">Nama:</label><br>
+                    <input type="text" id="nama" name="nama"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="telepon">Nomor Telepon:</label><br>
+                    <input type="tel" id="telepon" name="telepon">
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Detail Pesanan</legend>
+
+                    <label for="produk">Pilih Produk:</label><br>
+                    <select id="produk" name="produk">
+                        <option value="tshirt">Algorythm T-Shirt</option>
+                        <option value="longsleeve">Algorythm Longsleeve</option>
+                        <option value="hoodie">Algorythm Hoodie</option>
+                    </select>
+                    <br><br>
+
+                    <p>Ukuran:</p>
+                    <input type="radio" id="s" name="ukuran" value="S">
+                    <label for="s">S</label>
+                    <input type="radio" id="m" name="ukuran" value="M">
+                    <label for="m">M</label>
+                    <input type="radio" id="l" name="ukuran" value="L">
+                    <label for="l">L</label>
+                    <input type="radio" id="xl" name="ukuran" value="XL">
+                    <label for="xl">XL</label>
+                    <br><br>
+
+                    <label for="jumlah">Jumlah:</label><br>
+                    <input type="number" id="jumlah" name="jumlah"><br><br>
+
+                    <label for="catatan">Catatan:</label><br>
+                    <textarea id="catatan" name="catatan" rows="4" cols="30"></textarea>
+                </fieldset>
+
+                <br>
+                <input type="checkbox" id="setuju" name="setuju">
+                <label for="setuju">Saya menyetujui detail pesanan.</label>
+                <br><br>
+
+                <button class="tombol" type="submit">Pesan Sekarang</button>
+                <button class="tombol" type="reset">Reset</button>
+            </form>
+        </div>
+    </section>
+
+    <hr>
+
+    
+    <section id="kontak" class="isi hijau kontak">
+        <h2 class="judul">Kontak</h2>
+        <address>
+            <p><b>Owner:</b> <a href="https://www.instagram.com/_fznnn" target="_blank"></a></p>@_fznnn
+            <p><b>Instagram Brand:</b> <a href="https://www.instagram.com/algortyhms" target="_blank"></a></p>@algorythms
+            <p><b>WhatsApp:</b> <a href="https://wa.me/6281285766190" target="_blank">081285766190</a></p>081285766190
+            <p><b>Email:</b> <a href="mailto:fauzanaaazhimi@gmail.com"></a></p>fauzanaaazhimi@gmail.com
+        </address>
+    </section>
+
+    
+    <div class="footer">
+        <p>&copy; 2026 Algorythm - Wear The Code</p>
+    </div>
+
+</body>
+</html>
